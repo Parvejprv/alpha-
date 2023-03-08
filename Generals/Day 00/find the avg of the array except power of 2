@@ -1,0 +1,51 @@
+package test;
+
+
+import java.util.Scanner;
+
+/*
+ * @auhtor : Parvej Alam
+ *
+ */
+public class test1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter the value of n : ");
+		int n = sc.nextInt();	// size
+		
+		int arr[] = new int[n];		// array creation
+		
+		for(int i=0; i<n; i++) {
+			arr[i] = sc.nextInt();		// array elements inputed here
+		}
+		sc.close();
+		
+		
+		long power = 1;
+		int sum = 0;
+		for(int j=0; j<n; j++) {
+			if(j == 0 || j>10) {
+				
+				power = 1;
+				if(power == 1) {
+					continue;
+				}
+//				System.out.println(power);
+			}else {
+				power = power*2;
+				if(power == power*2) {
+					continue;
+				}
+//				System.out.println(power);
+				sum = sum + arr[j];
+//				System.out.print(arr[j]+" ");
+			}
+		}
+		
+		int avg = sum/n;
+//		System.out.print(sum+" ");      // total sum
+		System.out.println(avg);      // average
+		
+	}
+}
