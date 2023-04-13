@@ -1,0 +1,49 @@
+Question: Stack Syntax Learning
+========
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Stack<Integer> st = new Stack<>();
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int t = sc.nextInt();		// size
+        
+        for(int i=1; i<=t; i++){
+            int c = sc.nextInt();		// number of queries
+            
+            if(c == 1){
+                // print the size of the Stack,
+                // System.out.println("Size of the Stack is : ")
+                System.out.println(st.size());
+            } else if(c == 2){
+                // if size is empty, then print -1 Otherwise remove an element from the stack
+                if(st.size() == 0){
+                    System.out.println(-1);	
+                }else{
+                    st.pop();
+                }
+            } else if(c == 3){
+                // take a x as integer input and push it, to the stack
+                int x = sc.nextInt();			// take a x input
+                st.push(x);						// add(x) to the stack
+            } else if (c == 4){
+                if(st.size() == 0){
+                    System.out.println(-1);
+                }else{
+                    int top = st.peek();
+                    System.out.println(top);
+                }
+            }
+              
+        }
+        
+        
+    }
+}
