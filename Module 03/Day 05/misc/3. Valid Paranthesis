@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    // check if the Paranthesis is valid or not
+    static boolean isValid(String str){
+        Stack<Character> st = new Stack<Character>();
+        
+        for(int i=0; i<str.length(); i++){
+            char ch = str.charAt(i);		// Converts the string into the Character from String
+            
+            if(ch == '('){				// if Character equals left_paranthesis then push it
+                st.push(ch);
+            }else if(ch == ')'){		// if Character equals right_paranthesis then check, if stack is empty or not, if empty then return false
+                if(st.empty()){
+                    return false;
+                }
+                int res = st.pop();
+            }
+        }
+        
+        // Now we have to check for. if stack is empty() or not
+        if(st.empty()){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        String str = sc.nextLine();				// take a String input from
+        
+        boolean ans = isValid(str);
+    
+        System.out.println(ans);
+        
+    }
+}
