@@ -1,9 +1,12 @@
+package alpha-.Module 03.General Ques;
+
+
 // We have to reverse the String with the help of the Stack
 
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class reverseTheStringUsingStack {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

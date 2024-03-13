@@ -4,29 +4,33 @@
  Date & Time : 08-03-2023 11:49:00 PM
 *******************************************************************************************************************/
 
-import java.util.ArrayList;
-import java.util.*;
 
-public class Solution {
+// package alpha-.Module 03.Day 03;
+
+import java.util.*;
+import java.util.ArrayList;
+
+public class MergeTwoSortedArray {
+  
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         // Array1
     	int n = sc.nextInt();			// take size1 input for array1
-    	int [] A = new int[n];			// array1 creation
+    	int[] arr1 = new int[n];			// array1 creation
     	for(int i = 0; i < n; i++){
-    	    A[i] = sc.nextInt();		// array1 elements inputed here
+    	    arr1[i] = sc.nextInt();		// array1 elements inputed here
     	}
 
         // Array2
     	int m = sc.nextInt();			// take size2 input for array2
-    	int [] B = new int[m];			// array2 creation
+    	int arr2[] = new int[m];			// array2 creation
     	for(int i = 0; i < m; i++){
-    	    B[i] = sc.nextInt();			// array2 elements inputed
+    	   arr2[i] = sc.nextInt();			// array2 elements inputed
     	}
         
         
-        // create an arrayList to merge both the arrays
+        // create an arrayList to mergearr1oth the arrays
         ArrayList <Integer> arrayList = new ArrayList<>();
         
         // We, have created the arrayList, in which we have to store the elements in the sorted order, and also doesn't have duplicates element, so
@@ -36,13 +40,13 @@ public class Solution {
         
         while(i<n && j<m){
            int minVal = 0;
-            // A[i] would be minimum, and added to arrayList
-            if(A[i] < B[j]){
-                minVal = A[i];
+            // A[i] wouldarr1e minimum, and added to arrayList
+            if(arr1[i] < arr1[j]){
+                minVal = arr1[i];
                 i++;
             }else{
-                // B[i] would be minimum, and added to arrayList
-                minVal = B[j];
+                //arr1[i] wouldarr1e minimum, and added to arrayList
+                minVal =arr1[j];
                 j++;
             }
             // check for arrayList size, isEmpty or not.
@@ -64,16 +68,16 @@ public class Solution {
             // Check if arrayList size is not equals to 1st Array Element
             while(i<n){
                 // arrayList is not Empty
-                if(arrayList.get(arrayList.size()-1) != A[i]){
-                    arrayList.add(A[i]);
+                if(arrayList.get(arrayList.size()-1) != arr1[i]){
+                    arrayList.add(arr1[i]);
                 }
                 i++;
             }
             // Same Check for Array2, if arrayList size is not equals to 2nd Array Element
             while(j<m){
                 // arrayList is not Empty
-                if(arrayList.get(arrayList.size()-1) != B[j]){
-                    arrayList.add(B[j]);
+                if(arrayList.get(arrayList.size()-1) !=arr1[j]){
+                    arrayList.add(arr2[j]);
                 }
                 j++;
             }
@@ -88,3 +92,4 @@ public class Solution {
 
     }
 }
+
