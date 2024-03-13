@@ -1,0 +1,36 @@
+/****************
+  Solution : 
+****************/
+
+import java.util.ArrayList;
+import java.util.*;
+
+public class arrayListInReverse {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Create an ArrayList
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        
+        int n = sc.nextInt(); // size of the arrayList
+
+        // adding the elements into the arrayList
+        for (int i = 0; i < n; i++) {
+            Integer val = sc.nextInt(); // inputing the value from the keyboard
+            arrayList.add(val); // adding the value into the arrayList
+        }
+
+        // fetching the elements from the arrayList, using for loop
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(arrayList.get(i) + " ");
+        }
+        System.out.println();
+
+        Collections.reverse(arrayList);
+
+        for (int element : arrayList) {
+            System.out.print(element + " ");
+        }
+
+    }
+}

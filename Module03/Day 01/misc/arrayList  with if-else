@@ -1,0 +1,70 @@
+/**********************************************************************************************************************
+Question : 1 Array List with if-else
+**********************************************************************************************************************/
+
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Create an ArrayList
+        ArrayList<Integer> arrList = new ArrayList<>(); // ArrayList
+
+        // System.out.println("enter the numbers of query : ");
+        int t = sc.nextInt(); // numbers of queries
+
+        for (int i = 0; i < t; i++) {
+            // System.out.println("enter the case value : ");
+            int c = sc.nextInt(); // take caseValue
+
+            // case 1 (if(case 1 print we have to print the size of the array)
+            if (c == 1) {
+                System.out.println(arrList.size()); // print the size of the array
+
+            } else if (c == 2) {
+                if (arrList.size() == 0) {
+                    // if arrList is Empty
+                    System.out.println("invalid-move"); // if (arrList.isEmpty())
+                } else {
+                    // arrList is not empty
+                    int rem = arrList.remove(arrList.size() - 1);
+                    System.out.println(rem);
+                }
+
+            } else if (c == 3) {
+                int x = sc.nextInt(); // enter the x
+                System.out.println(x);
+                arrList.add(x);
+
+            } else if (c == 4) {
+                // if arrList is empty
+                if (arrList.size() == 0) {
+                    System.out.println("invalid-move");
+                } else {
+                    // array List is not empty
+                    int rem = arrList.remove(0);
+                    System.out.println(rem);
+                }
+
+            } else if (c == 5) {
+                int x = sc.nextInt();
+                System.out.println(x);
+                arrList.add(0, x); // add() - add at the last, add(idx,val) - add at idx
+
+            } else if (c == 6) {
+                if (arrList.size() == 0) {
+                    System.out.println("invalid-move");
+                } else {
+                    for (int j = 0; j < arrList.size(); j++) {
+                        System.out.print(arrList.get(j) + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
+    }
+}

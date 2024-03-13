@@ -1,0 +1,19 @@
+/***********************************************************************
+                              ArrayList
+************************************************************************/
+
+Questions that came to our mind is that ..
+------------------------------------------
+
+  1. What is ArrayList?
+  2. why we are using ArrayList?
+  3. Is ArrayList is similiar to the Array? if not then specify what is the difference between them?
+  4. Is size is fixed or not?, and why it is called dynamically in size?
+                    .
+                    .
+                    .
+                    .
+                    .
+                    .
+                    
+  
